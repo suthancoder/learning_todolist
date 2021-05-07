@@ -1,0 +1,16 @@
+<h1>INDEX PAGE</h1>
+
+
+<h2>Below is your to do list - GET IT DONE NOW!</h2>
+
+<br>
+
+<hr>
+
+<% @todoitems.each do |item|%>
+  <%= item.title %>
+  <%= item.description %>
+  <%= item.status %>
+  <br>
+  <hr>
+<% end %>
