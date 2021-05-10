@@ -4,6 +4,8 @@
 <h2>Below is your to do list - GET IT DONE NOW!</h2>
 
 <br>
+<%= link_to "Create New To Do Item", new_path %>
+<br>
 
 <hr>
 
@@ -11,6 +13,7 @@
   <%= item.title %>
   <%= item.description %>
   <%= item.status %>
+  <%= link_to "Show Item #{item.id}", show_path(item) %>
   <br>
   <hr>
 <% end %>
