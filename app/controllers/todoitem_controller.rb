@@ -1,4 +1,5 @@
 class TodoitemController < ApplicationController
+  before_action :set_todoitem, only: [:show, :edit, :update, :destroy]
 
   def index
     @todoitems = ToDoItem.all
@@ -13,6 +14,8 @@ class TodoitemController < ApplicationController
   end
 
   def create
+    # @todoitem = ToDoItem.new(title: params[:todoitem][:title], description: params[:todoitem][:description], status: params[:todoitem][:status] )
+
     @todoitem = ToDoItem.new(todoitem_params)
     @todoitem.save
 
@@ -27,7 +30,13 @@ class TodoitemController < ApplicationController
 
   private
 
+  def set_todoitem
+
+  end
+
   def todoitem_params
     params.require(:todoitem).permit(:tite, :description, :status)
   end
+
 end
+

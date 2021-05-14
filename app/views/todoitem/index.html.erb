@@ -1,25 +1,36 @@
-<h1>INDEX PAGE</h1>
 
 
-<h2>Below is your to do list - GET IT DONE NOW!</h2>
+<div class="container">
 
-<br>
-<%= link_to "Create New To Do Item", new_path %>
-<br>
-
-<hr>
-
-<% @todoitems.each do |item|%>
-  <%= item.title %>
-  <%= item.description %>
-  <%= item.status %>
-  <%= link_to "Show Item #{item.id}", show_path(item) %>
-  <br>
-  <hr>
-<% end %>
-
-<hr>
-<h1>TEST MODIFICATION</h1>
+  <div class="justify-content">
+    <%= image_tag "https://picsum.photos/seed/picsum/900/600" %>
+  </div>
 
 
-<h1>TEST PR REQUEST FOR PIPELINE</h1>
+  <div>
+    <h1>INDEX PAGE</h1>
+
+
+    <h2>Below is your to do list - GET IT DONE NOW!</h2>
+
+    <br>
+    <%= link_to "Create New To Do Item", new_path %>
+    <br>
+
+    <hr>
+
+    <% @todoitems.each do |item|%>
+      <%= item.title %>
+      <%= item.description %>
+      <%= item.status %>
+      <%= link_to "Show Item #{item.id}", show_path(item) %>
+      <br>
+      <hr>
+    <% end %>
+
+    <hr>
+
+  </div>
+
+</div>
+
