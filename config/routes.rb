@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     delete '/todoitems/:id', to: 'todoitem#destroy', as: 'delete'
     get '/todoitems/:id/edit', to: 'todoitem#edit', as: 'edit'
     patch '/todoitems/:id', to: 'todoitem#update', as: 'update'
-    # patch '/todoitems/:id', to: 'todoitem#update', as: 'update'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

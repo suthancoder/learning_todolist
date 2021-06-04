@@ -1,10 +1,6 @@
 <h1>Edit To Do Item</h1>
 
-
-<!-- simple_form_for @todoitem, :url => @todoitem.new_record? ? url_for(action: 'create', controller: 'todoitem/new') : url_for(action: 'update', controller: 'todoitem/news_items') do |f| -->
-
-
-<%= simple_form_for @todoitem do |f| %>
+<%= simple_form_for :todoitem, method: :put do |f| %>
   <%= f.input :title, :label => "Title" %>
   <%= f.input :description, :label => "Description" %>
   <%= f.input :status, :label => "Status" %>

@@ -27,6 +27,7 @@ class TodoitemController < ApplicationController
   end
 
   def update
+
   end
 
   def destroy
