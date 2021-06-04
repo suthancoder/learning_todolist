@@ -1,1 +1,19 @@
 @import "show";
+
+
+.header-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+
+  h1 {
+    margin: 42px 0 30px;
+    font-size: 3rem;
+  }
+
+  p {
+    margin: 0px 0px 40px;
+    font-size: 1rem;
+  }
+}
+

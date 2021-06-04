@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container page-width">
   <nav class="d-flex justify-content-between align-items-center navbar-height">
 
     <div class="d-flex justify-content-center align-items-center">
@@ -10,7 +10,7 @@
       <div class="m-1 p-2">Jobs Report</div>
       <div class="m-1 p-2">Events</div>
       <div class="m-1 p-2">Alumni</div>
-      <div class="m-1 p-2">Apply Now</div>
+     <div><%= link_to "Apply Now", show_path(ToDoItem.first), class: "white-call-to-action-button"  %></div>
     </div>
   </nav>
 
