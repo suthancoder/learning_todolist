@@ -1,4 +1,6 @@
 class TodoitemController < ApplicationController
+  layout :home_page_layouts, only: [:index]
+
   before_action :set_todoitem, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -6,7 +8,6 @@ class TodoitemController < ApplicationController
   end
 
   def show
-    @todoitem = ToDoItem.find(params[:id])
   end
 
   def new
@@ -28,14 +29,23 @@ class TodoitemController < ApplicationController
   def update
   end
 
+  def destroy
+    @todoitem.delete
+    redirect_to index_path
+  end
+
   private
 
   def set_todoitem
-
+    @todoitem = ToDoItem.find(params[:id])
   end
 
   def todoitem_params
     params.require(:todoitem).permit(:tite, :description, :status)
+  end
+
+  def home_page_layouts
+    "home_page"
   end
 
 end
