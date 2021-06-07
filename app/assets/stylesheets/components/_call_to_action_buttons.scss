@@ -22,6 +22,21 @@
 }
 
 
+.red-call-to-action-button-sm {
+  background-color: $red;
+  color: white;
+  box-shadow: 3px 3px black;
+
+
+  padding: 24px;
+  text-decoration: none;
+
+}
+
+
+
+
+
 .white-call-to-action-button {
   background-color: white;
   color: $red;
@@ -30,6 +45,19 @@
 
   padding: 24px;
   text-decoration: none;
+
+}
+
+
+.white-call-to-action-button-sm {
+  background-color: $light-gray;
+  color: $red;
+  border-color: $gray;
+  border-radius: 1em;
+
+  padding: 12px;
+  text-decoration: none;
+  width: 6em;
 
 }
 

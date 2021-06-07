@@ -28,6 +28,11 @@ class TodoitemController < ApplicationController
 
   def update
 
+      @todoitem.update(title: params["todoitem"]["title"], description: params["todoitem"]["description"], status: params["todoitem"]["status"])
+      @todoitem.save
+
+      redirect_to :action => 'show', id: @todoitem
+
   end
 
   def destroy

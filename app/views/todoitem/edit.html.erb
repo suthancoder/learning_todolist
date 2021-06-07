@@ -1,6 +1,6 @@
 <h1>Edit To Do Item</h1>
 
-<%= simple_form_for :todoitem, method: :put do |f| %>
+<%= simple_form_for(:todoitem, url: "/todoitems/#{@todoitem.id}", method: "patch") do |f| %>
   <%= f.input :title, :label => "Title" %>
   <%= f.input :description, :label => "Description" %>
   <%= f.input :status, :label => "Status" %>
