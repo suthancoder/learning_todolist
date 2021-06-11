@@ -54,11 +54,16 @@
   color: $red;
   border-color: $gray;
   border-radius: 1em;
-
+  text-align: center;
   padding: 12px;
   text-decoration: none;
   width: 6em;
 
+  &:hover {
+    background-color: $gray;
+    color: $red;
+    box-shadow: 1px 1px $indigo;
+  }
 }
 
 

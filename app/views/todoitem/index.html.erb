@@ -31,9 +31,20 @@
 
       <% @todoitems.each do |item|%>
     <div class="card">
-        <%= item.title %>
-        <%= item.description %>
-        <%= item.status %>
+
+      <div class="card-top-section">
+        <div class="card-top-section-element">
+          <p class="card-text-style"><%= item.title %></p>
+        <p class="card-text-style"><%= item.description %></p>
+         <p class="card-text-style"><%= item.status %></p>
+        </div>
+        <div class="card-top-section-element">
+          <h2 class="card-text-style">image</h2>
+        </div>
+      </div>
+
+
+
 
         <div class="card-buttons">
           <%= link_to "Show", show_path(item), class: "white-call-to-action-button-sm" %>

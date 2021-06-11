@@ -4,12 +4,25 @@
 
 }
 
+.card-top-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  word-wrap: break-word;
+}
+
+.card-top-section-element {
+  width: 100%;
+  word-wrap: break-word;
+
+}
+
+
 .card {
   width: 25em;
   padding: 1em 2em;
   margin: 1em 2em;
-  border-color: $gray;
-  box-shadow: 5em;
+  border-color: red;
+  box-shadow: 1em 1em 0.5em 0.5em $gray;
   border-radius: 2em;
 
 }
@@ -17,4 +30,16 @@
 .card-buttons {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 750px) {
+  .card-top-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.card-text-style {
+  word-break: break-all;
 }

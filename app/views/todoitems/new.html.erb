@@ -1,0 +1,9 @@
+<h1>New To Do Item Form</h1>
+
+<%= simple_form_for :todoitem do |f| %>
+  <%= f.input :title, :label => "Title" %>
+  <%= f.input :description, :label => "Description" %>
+  <%= f.input :status, :label => "Status" %>
+  <%= f.button :submit, class: "btn-primary" %>
+
+<% end %>
