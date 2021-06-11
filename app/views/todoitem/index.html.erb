@@ -1,25 +1,54 @@
-<h1>INDEX PAGE</h1>
 
 
-<h2>Below is your to do list - GET IT DONE NOW!</h2>
 
-<br>
-<%= link_to "Create New To Do Item", new_path %>
-<br>
+<div class="container page-width">
 
-<hr>
+  <div class="d-flex align-items-center header-section">
+    <div>
+      <div>
+        <h1>Change your life, learn to code</h1>
+      </div>
 
-<% @todoitems.each do |item|%>
-  <%= item.title %>
-  <%= item.description %>
-  <%= item.status %>
-  <%= link_to "Show Item #{item.id}", show_path(item) %>
-  <br>
-  <hr>
-<% end %>
+      <div>
+        <p>Through immersive coding bootcamps, Le Wagon teaches you the skills and entrepreneurial mindset you need to thrive, now and in the future.</p>
+      </div>
+      <div class="d-flex justify-content-between">
+        <%= link_to "Discover our courses", show_path(ToDoItem.first), class: "red-call-to-action-button" %>
+        <%= link_to "Find A Campus", show_path(ToDoItem.first), class: "white-call-to-action-button" %>
+      </div>
+    </div>
+    <div class="justify-content">
+      <%= image_tag "https://picsum.photos/seed/picsum/900/600", class: "image-fit-box" %>
+    </div>
+  </div>
 
-<hr>
-<h1>TEST MODIFICATION</h1>
+
+    <br>
+    <%= link_to "Create New To Do Item", new_path %>
+    <br>
+    <h1>INDEX PAGE</h1>
+  <div class="cards">
+
+      <% @todoitems.each do |item|%>
+    <div class="card">
+        <%= item.title %>
+        <%= item.description %>
+        <%= item.status %>
+
+        <div class="card-buttons">
+          <%= link_to "Show", show_path(item), class: "white-call-to-action-button-sm" %>
+
+          <%= link_to "Edit", edit_path(item), class: "white-call-to-action-button-sm" %>
+
+          <%= link_to "Delete", delete_path(item), :confirm => 'sure?', :method => 'delete', class: "white-call-to-action-button-sm" %>
+
+        </div>
+    </div>
+      <% end %>
 
 
-<h1>TEST PR REQUEST FOR PIPELINE</h1>
+
+  </div>
+
+</div>
+
